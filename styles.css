@@ -1,0 +1,284 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9; /* Fond gris clair */
+    color: #555555; /* Texte gris moyen */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+/* Barre de progression */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #1d72b8; /* Bleu clair */
+    z-index: 9999;
+    transition: width 0.2s ease;
+}
+
+/* Header */
+header {
+    background-color: #002244; /* Bleu foncé */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header h1 {
+    font-size: 3.5rem; /* Taille plus grande pour un effet professionnel */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/* Effet scroll sur le header */
+header.scrolled {
+    background-color: #001122; /* Bleu encore plus foncé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+.navbar {
+    background-color: #ffffff; /* Blanc */
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.navbar a.nav-link {
+    color: #555555 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a.nav-link:hover {
+    color: #1d72b8 !important; /* Bleu clair au survol */
+}
+
+/* Bouton actif dans la navigation */
+.navbar .nav-link.active {
+    font-weight: 600;
+    border-bottom: 2px solid #1d72b8; /* Soulignement bleu clair */
+}
+
+/* Section À propos */
+#about {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/* Section Services */
+#services {
+    background-color: #f7f9fc; /* Fond gris clair */
+    padding: 60px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.8rem;
+    color: #002244; /* Bleu foncé */
+    margin-bottom: 40px;
+}
+
+/* Couleurs spécifiques des icônes */
+.icon-blue {
+    color: #1d72b8 !important; /* Bleu clair pour "Création de sites web" */
+}
+
+.icon-green {
+    color: #4caf50 !important; /* Vert pour "Design graphique" */
+}
+
+.icon-orange {
+    color: #ff9800 !important; /* Orange pour "Assistance virtuelle" */
+}
+
+/* Animation au survol des icônes */
+#services .fa:hover {
+    transform: scale(1.2); /* Agrandissement subtil au survol */
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Style des colonnes de services */
+#services .col-md-4 {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+#services .col-md-4:hover {
+    transform: translateY(-10px); /* Effet de levée */
+}
+
+#services h4 {
+    font-size: 1.8rem; /* Plus grand pour un style pro */
+    font-weight: 500;
+    margin-top: 20px;
+    color: #002244;
+}
+
+#services p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555555;
+}
+
+/* Section Compétences */
+#skills {
+    padding: 60px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.8rem;
+    color: #002244;
+    margin-bottom: 40px;
+}
+
+#skills h4 {
+    font-size: 1.6rem;
+    color: #1d72b8; /* Bleu clair */
+    margin-bottom: 20px;
+}
+
+#skills ul {
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555555;
+    padding-left: 0;
+}
+
+#skills ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+#skills ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #1d72b8; /* Bleu clair */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Section Contact */
+#contact h2 {
+    font-size: 2.5rem;
+    color: #002244;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+#contact .icon-blue {
+    color: #0077b5; /* Couleur officielle LinkedIn */
+    margin-right: 10px;
+}
+
+#contact .icon-green {
+    color: #25d366; /* Couleur officielle WhatsApp */
+    margin-right: 10px;
+}
+
+#contact .icon-dark {
+    color: #333; /* Couleur sombre pour GitHub */
+    margin-right: 10px;
+}
+
+#contact a {
+    color: #555555;
+    font-weight: 500;
+}
+/* Footer */
+footer {
+    background-color: #002244;
+    color: white;
+    padding: 20px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Bouton Scroll to Top */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #1d72b8; /* Bleu clair */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTop:hover {
+    background-color: #004d8f;
+    transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #services .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    #skills h4 {
+        font-size: 1.4rem;
+    }
+
+    #skills ul li {
+        font-size: 0.9rem;
+    }
+
+    #contact .form-control {
+        font-size: 0.9rem;
+    }
+}
